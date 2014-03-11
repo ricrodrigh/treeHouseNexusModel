@@ -1,0 +1,27 @@
+<project>
+
+    <target name="clean">
+	    <delete dir="build"/>
+	    <delete dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin">
+			<classpath>
+				<pathelement path="/opt/eclipse/libraries/gson/google-gson-2.2.4/gson-2.2.4.jar"/>
+				<pathelement path="/opt/eclipse/libraries/guava/guava-14.0.1.jar"/>
+			</classpath>
+        </javac>
+    </target>
+
+    <target name="build">
+        <mkdir dir="build"/>
+        <jar destfile="build/treehouseNexusModel.jar" basedir="bin">
+            <manifest>
+                <attribute name="Implementation-Version" value="1.0.0"/>
+                <attribute name="Built-By" value="Ricardo Rodriguez"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
