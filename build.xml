@@ -17,7 +17,7 @@
 
     <target name="build">
         <mkdir dir="build"/>
-        <jar destfile="build/treehouseNexusModel.jar" basedir="bin">
+        <jar destfile="build/treehouseNexusAkka.jar" basedir="bin">
             <manifest>
                 <attribute name="Implementation-Version" value="1.0.0"/>
                 <attribute name="Built-By" value="Ricardo Rodriguez"/>

@@ -22,7 +22,6 @@ public class LiquidLevelStrip extends Sensor<String> implements HealthCheckable 
 		probeResistance = new SensorReading<Float, SensorUnits>(0f, SensorUnits.OHM);
 	}
 	
-	@Override
 	public boolean doHealthCheck() {
 		// TODO Auto-generated method stub
 		return true;

@@ -11,7 +11,7 @@ import com.hadron.treehousenexus.model.home.util.SensorReading;
 public abstract class Sensor<Reading> {
 	
 	private String sensorId;
-	
+
 	public Sensor(String sensorId) {
 		this.sensorId = sensorId;
 	}

@@ -43,7 +43,6 @@ public abstract class ElectronicsSystem<Reading> implements HealthCheckable{
 	
 	public abstract void activate();
 
-	@Override
 	public boolean doHealthCheck() {		
 		return true;
 	}
