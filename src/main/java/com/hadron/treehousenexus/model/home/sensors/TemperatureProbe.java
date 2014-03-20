@@ -6,7 +6,8 @@ import com.hadron.treehousenexus.model.home.util.SensorUnits;
 
 
 public class TemperatureProbe extends Sensor<String> implements Termometer {
-
+	
+	private static final String SENSOR_PREFIX = "TP";
 	
 	private SensorReading<Float, SensorUnits> temperature;
 	private Gson gson = new Gson();
@@ -39,6 +40,10 @@ public class TemperatureProbe extends Sensor<String> implements Termometer {
 	@Override
 	public String toJson() {
 		return gson.toJson(this);
+	}
+
+	public static String getSensorPrefix() {
+		return SENSOR_PREFIX;
 	}
 
 }

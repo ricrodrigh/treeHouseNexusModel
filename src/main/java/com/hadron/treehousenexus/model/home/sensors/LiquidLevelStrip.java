@@ -12,6 +12,8 @@ import com.hadron.treehousenexus.model.home.util.SensorUnits;
  */
 public class LiquidLevelStrip extends Sensor<String> implements HealthCheckable {
 
+	private static final String SENSOR_PREFIX = "DPS";
+
 	private SensorReading<Float, SensorUnits> probeResistance;
 	private SensorReading<Float, SensorUnits> depth;
 	
@@ -53,6 +55,10 @@ public class LiquidLevelStrip extends Sensor<String> implements HealthCheckable 
 	public String toJson() {
 		Gson gson = new Gson();
 		return gson.toJson(this);
+	}
+	
+	public static String getSensorPrefix() {
+		return SENSOR_PREFIX;
 	}
 
 }
